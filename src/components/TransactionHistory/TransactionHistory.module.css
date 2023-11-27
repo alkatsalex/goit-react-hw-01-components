@@ -1,0 +1,35 @@
+.transaction_history {
+    width: 550px;
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 1px gray;
+    margin-bottom: 100px;
+}
+
+.thead {
+    background-color: skyblue;
+    height: 34px;
+}
+
+.item {
+    border-right: solid 5px gray;
+}
+
+.t_body {
+    border-right: solid 1px gray;
+    background-color: white;
+}
+
+.item:nth-child(2n){
+    background-color: rgb(133, 169, 184);
+} 
+
+.info {
+    border-right: solid 1px gray;
+
+text-align: center;
+padding: 15px 24px;
+}
+.info:last-child {
+    border-right: none;
+}
