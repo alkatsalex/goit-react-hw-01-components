@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import TransactionHistoryItem from "./TransactionHistoryItem"
 import css from "./TransactionHistory.module.css"
 export default function TransactionHistory({items}) {
@@ -12,8 +13,19 @@ export default function TransactionHistory({items}) {
   </thead>
 
   <tbody className={css.t_body}>
-    <TransactionHistoryItem prop={items}/>
+    {items.map(item => (
+      <TransactionHistoryItem prop={item}
+      key={item.id}
+      type={item.type}
+      amount={item.amount}
+      currency={item.currency}/>
+    ))}
+    
   </tbody>
 </table>
     )
+}
+
+TransactionHistory.propTypes = {
+  items: PropTypes.array,
 }
